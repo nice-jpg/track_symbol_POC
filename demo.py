@@ -43,7 +43,7 @@ if __name__ == "__main__":
         print(s.solver.constraints)
         
         # angr uses key ('mem', addr, 1) to track some symbols(all symbols UNINITIALIZED)
-        # I dont know where are these symbols used
+        # I dont know where these symbols are used
         symbols = s.solver.get_variables('var')
         for var in symbols:
             print('%s eval to %x' % (var[1], s.solver.eval(var[1])))
